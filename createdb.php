@@ -6,11 +6,9 @@ try {
 	$dbName = 'direktprodukte';
 	$dbHost = "10.85.176.3:3306";
 
-	// Connect using TCP
 	$dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
 
-	// Connect to the database
-	$conn = new PDO($dsn, $username, $password, $connConfig);
+	$conn = new PDO($dsn, $username, $password);
     	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$sql = "CREATE TABLE Products(
 		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
