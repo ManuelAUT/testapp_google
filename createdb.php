@@ -1,7 +1,7 @@
 <?php
 
 try {
-	$username = 'root';
+	$username = 'student';
 	$password = 'asdf1234.';
 	$dbName = 'direktprodukte';
 	$dbHost = "10.85.176.3:3306";
