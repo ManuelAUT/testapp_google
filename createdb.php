@@ -1,19 +1,17 @@
 <?php
 
 try {
-$username = 'root';
-$password = 'asdf1234.';
-$dbName = 'direktprodukte';
-$connectionName = getenv("direktphp-310214:europe-west3:direktprodukte");
-$socketDir = getenv('DB_SOCKET_DIR') ?: '/cloudsql';
+	$username = 'root';
+	$password = 'asdf1234.';
+	$dbName = 'direktprodukte';
+	$dbHost = "10.85.176.3:3306";
 
-$dsn = sprintf(
-    'mysql:dbname=%s;unix_socket=%s/%s',
-    $dbName,
-    $socketDir,
-    $connectionName
-);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	// Connect using TCP
+	$dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
+
+	// Connect to the database
+	$conn = new PDO($dsn, $username, $password, $connConfig);
+    	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$sql = "CREATE TABLE Products(
 		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		bezeichnung VARCHAR(30) NOT NULL ,
@@ -23,11 +21,10 @@ $dsn = sprintf(
 
 	$conn->exec($sql);
 	echo "Table Products created successfully" . "\n";
-	}
-catch(PDOException $e)
-    {
-    echo $sql . "<br>" . $e->getMessage() . "\n";
-    }
+}
+catch(PDOException $e){
+    	echo $sql . "<br>" . $e->getMessage() . "\n";
+}
 ?>
 <br>
 <br>
