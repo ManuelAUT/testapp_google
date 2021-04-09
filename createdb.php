@@ -1,13 +1,12 @@
 <?php
 
 try {
-// $username = 'root';
-// $password = 'asdf1234.';
-// $dbName = 'direktprodukte';
-// $connectionName = getenv("direktphp-310214:europe-west3:direktprodukte");
-// $socketDir = getenv('DB_SOCKET_DIR') ?: '/cloudsql';
+$username = 'root';
+$password = 'asdf1234.';
+$dbName = 'direktprodukte';
+$connectionName = getenv("direktphp-310214:europe-west3:direktprodukte");
+$socketDir = getenv('DB_SOCKET_DIR') ?: '/cloudsql';
 
-// Connect using UNIX sockets
 $dsn = sprintf(
     'mysql:dbname=%s;unix_socket=%s/%s',
     $dbName,
