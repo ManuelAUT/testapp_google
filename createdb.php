@@ -10,7 +10,7 @@ try {
 
 	$conn = new PDO($dsn, $username, $password);
     	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = "CREATE TABLE Produkte(
+	$sql = "CREATE TABLE Products(
 		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		bezeichnung VARCHAR(30) NOT NULL ,
 		langbeschreibung VARCHAR(256) NOT NULL ,
@@ -26,7 +26,7 @@ catch(PDOException $e){
 ?>
 <br>
 <br>
-<a href=./homepage.php>Back</a>
+<a href=./>Back</a>
 
 <?php
 /*

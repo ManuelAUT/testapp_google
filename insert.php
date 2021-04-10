@@ -10,7 +10,7 @@ try {
 
 	$conn = new PDO($dsn, $username, $password);
     	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$stmt = $conn->prepare("INSERT INTO Produkte(bezeichnung, thumbnail, langbeschreibung)
+	$stmt = $conn->prepare("INSERT INTO Products(bezeichnung, thumbnail, langbeschreibung)
 		VALUES (:bezeichnung, :thumbnail, :langbeschreibung)");
 	$stmt->bindParam(':bezeichnung', $bezeichnung);
 	$stmt->bindParam(':thumbnail', $thumbnail);
@@ -27,7 +27,7 @@ catch(PDOException $e)
     echo $sql . "<br>" . $e->getMessage() . "\n";
     }
 
-header("Location: ./homepage.php");
+header("Location: ./");
 
 /*
 INSERT INTO Products (bezeichnung, thumbnail, langbeschreibung)
