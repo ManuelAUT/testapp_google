@@ -23,7 +23,7 @@
 
 	$conn = new PDO($dsn, $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $conn->prepare("SELECT id, bezeichnung, thumbnail, langbeschreibung FROM Products");
+        $stmt = $conn->prepare("SELECT id, bezeichnung, thumbnail, langbeschreibung FROM Produkte");
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     }

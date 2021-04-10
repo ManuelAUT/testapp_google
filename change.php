@@ -10,7 +10,7 @@ try {
 
 	$conn = new PDO($dsn, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("UPDATE Products SET bezeichnung = :bezeichnung,
+    $stmt = $conn->prepare("UPDATE Produkte SET bezeichnung = :bezeichnung,
       thumbnail = :thumbnail,
       langbeschreibung = :langbeschreibung
       WHERE id = :id;");
