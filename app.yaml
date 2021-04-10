@@ -5,5 +5,9 @@ env_variables:
   LOG_CHANNEL: stderr
   APP_STORAGE: /tmp
 
+
+url: .*
+script: auto
+        
 vpc_access_connector:
   name: projects/direktphp-310214/locations/europe-west3/connectors/direktphpapp
