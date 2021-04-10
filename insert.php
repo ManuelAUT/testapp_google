@@ -27,7 +27,7 @@ catch(PDOException $e)
     echo $sql . "<br>" . $e->getMessage() . "\n";
     }
 
-header("Location: ./index.php");
+header("Location: ./homepage.php");
 
 /*
 INSERT INTO Products (bezeichnung, thumbnail, langbeschreibung)

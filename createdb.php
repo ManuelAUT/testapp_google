@@ -26,7 +26,7 @@ catch(PDOException $e){
 ?>
 <br>
 <br>
-<a href=./index.php>Back</a>
+<a href=./homepage.php>Back</a>
 
 <?php
 /*
