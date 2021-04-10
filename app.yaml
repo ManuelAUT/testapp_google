@@ -4,3 +4,6 @@ env_variables:
   APP_DEBUG: true
   LOG_CHANNEL: stderr
   APP_STORAGE: /tmp
+
+vpc_access_connector:
+  name: projects/direktphp-310214/locations/europe-west3/connectors/direktphpapp
