@@ -23,12 +23,7 @@ try {
 catch(PDOException $e){
     	echo $sql . "<br>" . $e->getMessage() . "\n";
 }
-?>
-<br>
-<br>
-<a href=./>Back</a>
 
-<?php
 /*
 
 zweite db:
@@ -39,3 +34,7 @@ create table Bestellung(
 
 */
 ?>
+
+<br>
+<br>
+<a href=./>Back to Main</a>

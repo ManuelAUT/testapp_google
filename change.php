@@ -31,7 +31,9 @@ catch(PDOException $e)
     echo $sql . "<br>" . $e->getMessage() . "\n";
     }
 
-header("Location: ./");
-
 
 ?>
+
+<br>
+<br>
+<a href=./>Back to Main</a>

@@ -12,7 +12,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("DROP TABLE Products");
     $stmt->execute();
-
+	echo "table destroyed";
 }
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
@@ -20,3 +20,6 @@ catch(PDOException $e) {
 echo "</table>";
 $conn = null;
 ?>
+<br>
+<br>
+<a href=./>Back to Main</a>

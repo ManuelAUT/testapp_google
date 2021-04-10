@@ -48,7 +48,8 @@ try    {
      echo $code.": ".$error_message."<br />";
  }
 
-
-header("Location: ./index.php");
 }
 ?>
+<br>
+<br>
+<a href=./>Back to Main</a>

@@ -20,17 +20,20 @@ try {
 	$thumbnail = $_POST['thumbnail'];
 	$langbeschreibung = $_POST['langbeschreibung'];
 	$stmt->execute();
-
+	echo "sucess";
 }
 catch(PDOException $e)
     {
     echo $sql . "<br>" . $e->getMessage() . "\n";
     }
 
-header("Location: ./");
 
 /*
 INSERT INTO Products (bezeichnung, thumbnail, langbeschreibung)
 	VALUES ('value1', 'https://thewowgallery.de/wp-content/uploads/2020/04/instagram-bilder-qualita%CC%88t-1024x576.jpg', 'value3');
 */
 ?>
+
+<br>
+<br>
+<a href=./>Back to Main</a>
