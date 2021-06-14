@@ -10,4 +10,4 @@ handlers:
   script: auto
         
 vpc_access_connector:
-  name: projects/direktphp-310214/locations/europe-west3/connectors/direktphpapp
+  name: projects/my-terraform-project-316213/locations/europe-west3/connectors/terraform-webapp-3456
