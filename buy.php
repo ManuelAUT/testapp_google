@@ -1,18 +1,27 @@
+require 'vendor/autoload.php';
+
 use Google\Cloud\PubSub\PubSubClient;
 
-/**
- * Publishes a message for a Pub/Sub topic.
- *
- * @param string $projectId  The Google project ID.
- * @param string $topicName  The Pub/Sub topic name.
- * @param string $message  The message to publish.
- */
-function publish_message($projectId, $topicName, $message)
-{
-    $pubsub = new PubSubClient([
-        'projectId' => $projectId,
-    ]);
-    $topic = $pubsub->topic($topicName);
-    $topic->publish(['data' => $message]);
-    print('Message published' . PHP_EOL);
+$pubSub = new PubSubClient();
+
+// Get an instance of a previously created topic.
+$topic = $pubSub->topic('terraform-topic');
+
+// Publish a message to the topic.
+$topic->publish([
+    'data' => 'My new message.',
+    'attributes' => [
+        'location' => 'Detroit'
+    ]
+]);
+
+// Get an instance of a previously created subscription.
+$subscription = $pubSub->subscription('terraform-sub');
+
+// Pull all available messages.
+$messages = $subscription->pull();
+
+foreach ($messages as $message) {
+    echo $message->data() . "\n";
+    echo $message->attribute('location');
 }

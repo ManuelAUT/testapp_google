@@ -26,7 +26,7 @@ catch(PDOException $e){
 
 /*
 
-zweite db:
+zweite db test:
 create table Bestellung(
 	ArtNr int primary key,
 	Menge int not null,
