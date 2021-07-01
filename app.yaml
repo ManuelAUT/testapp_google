@@ -9,5 +9,5 @@ handlers:
 - url: .*
   script: auto
         
-vpc_access_connector:
-  name: projects/my-terraform-project-316213/locations/europe-west3/connectors/terraform-webapp-3456
+# vpc_access_connector:
+#  name: projects/my-terraform-project-316213/locations/europe-west3/connectors/terraform-webapp-3456
