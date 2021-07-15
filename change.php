@@ -4,7 +4,7 @@ try {
 	$username = 'student';
 	$password = 'asdf1234.';
 	$dbName = 'direktprodukte';
-	$dbHost = "34.89.182.101:3306";
+	$dbHost = "34.141.81.168:3306";
 
 	$dsn = sprintf('mysql:dbname=%s;host=%s', $dbName, $dbHost);
 
